@@ -1,0 +1,150 @@
+/* --- Pengaturan Dasar & Mobile First (Untuk HP) --- */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #FFFFFF; /* Latar Belakang: Putih Bersih */
+    margin: 0;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+/* Mengatur agar semua section disembunyikan secara default */
+.start-content,
+.quiz-content,
+.result-content {
+    display: none;
+}
+
+/* Kelas .active inilah yang akan menampilkan section */
+.active {
+    display: block;
+}
+
+/* Styling untuk Kontainer Utama di setiap section */
+.container-start,
+.container-question,
+.container-result {
+    background-color: white;
+    padding: 25px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 550px;
+    text-align: center;
+}
+
+/* Styling Teks */
+h1 {
+    font-size: 1.8em;
+}
+h2 {
+    font-size: 1.5em;
+}
+h1, h2, h3 {
+    margin-top: 0;
+    color: #141414; /* Teks Utama: Hitam Pekat */
+}
+
+p {
+    color: #7F8C8D; /* Teks Sekunder: Abu-abu Batu */
+    line-height: 1.6;
+    font-size: 1em;
+}
+
+/* Styling Tombol */
+button {
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Tombol Aksi (Mulai & Ulangi) */
+#startButton,
+#restartButton {
+    background-color: #8E44AD; /* Tombol Utama: Ungu Modern */
+    color: white;
+    margin-top: 15px;
+}
+
+#startButton:hover,
+#restartButton:hover {
+    background-color: #9B59B6; /* Ungu sedikit lebih terang saat hover */
+}
+
+/* Penampung Tombol Jawaban */
+#answerButtons {
+    margin: 25px 0;
+    display: grid;
+    gap: 10px;
+}
+
+/* Tombol Jawaban Individual */
+.button-answer {
+    background-color: #f4f4f9;
+    color: #1c1e21;
+    text-align: left;
+    width: 100%;
+}
+
+.button-answer:hover {
+    background-color: #e9e9f3;
+}
+
+/* Styling khusus untuk elemen hasil */
+#resultProfession {
+    color: #E74C3C; /* Aksen: Merah Koral */
+}
+
+
+/* --- Media Query untuk Tablet --- */
+@media (min-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    .container-start,
+    .container-question,
+    .container-result {
+        padding: 30px 40px;
+    }
+
+    h1 {
+        font-size: 2.2em;
+    }
+    h2 {
+        font-size: 1.8em;
+    }
+
+    p {
+        font-size: 1.1em;
+    }
+
+    button {
+        padding: 14px 28px;
+    }
+}
+
+/* --- Media Query untuk Desktop --- */
+@media (min-width: 1024px) {
+    .container-start,
+    .container-question,
+    .container-result {
+        padding: 35px 50px;
+    }
+    
+    h1 {
+        font-size: 2.5em;
+    }
+}
